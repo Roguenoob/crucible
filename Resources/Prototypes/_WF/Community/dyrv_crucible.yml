@@ -1,0 +1,40 @@
+# Vessel prototype made in mapping mode from "DYRV - Crucible". Check every field before it goes in the game.
+# Grid: put DYRV - Crucible.yml at Resources/SharedMaps/_WF/Community/dyrv_crucible.yml
+# Prototype: put this file, DYRV - Crucible.vessel.yml, at Resources/Prototypes/_WF/Community/dyrv_crucible.yml
+# Set by the mapper in the export wizard: name, description, price, category, class, group, engine, access, requireCrew.
+
+- type: vessel
+  id: WFDYRVCrucible
+  parent: BaseVessel
+  name: 'DYRV - Crucible'
+  description: 'A Capital class Mobile Repair Yard, build with comfort in mind, for both the crew and those getting recovered. It Sports an Atrium, Warehouse, Singular Mining laser with Ore Processor and Salvage processer, Small Medical Post, Engineering Fab, and Large Crew Quarters for a crew of Four.  Dunerose Yards, Do the Job, and Do it Elegeantly'
+  price: 500000 # appraised at 122940
+  category: Large # 1539 tiles
+  group: Shipyard
+  shuttlePath: /SharedMaps/_WF/Community/dyrv_crucible.yml
+  guidebookPage: null
+  class:
+  - Capital
+  - Salvage
+  - Engineering
+  - Civilian
+  engine:
+  - AME
+
+- type: gameMap
+  id: WFDYRVCrucible
+  mapName: 'DYRV - Crucible'
+  mapPath: /SharedMaps/_WF/Community/dyrv_crucible.yml
+  minPlayers: 0
+  stations:
+    WFDYRVCrucible:
+      stationProto: StandardFrontierVessel
+      components:
+      - type: StationNameSetup
+        mapNameTemplate: 'DYRV - Crucible {1}'
+        nameGenerator:
+          !type:NanotrasenNameGenerator
+          prefixCreator: '14'
+      - type: StationJobs
+        availableJobs:
+          Contractor: [ 0, 0 ]
