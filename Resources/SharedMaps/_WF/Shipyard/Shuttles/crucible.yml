@@ -63,7 +63,7 @@ entities:
   - uid: 2
     components:
     - type: MetaData
-      name: grid
+      name: Crucible
     - type: Transform
       parent: invalid
       pos: -1,9
@@ -10120,8 +10120,6 @@ entities:
       rot: -1.5707963267948966 rad
       pos: -1.5,-27.5
     - type: DeviceNetwork
-      deviceLists:
-      - invalid
   - uid: 1283
     components:
     - type: Transform
